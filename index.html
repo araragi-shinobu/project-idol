@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Project Idol - A masquerade of sound. J-Rock and anime passion brought to life on stage.">
+    <meta name="keywords" content="Project Idol, J-Rock, Band, Music, Live Performance, Masquerade">
+    <meta name="author" content="Project Idol">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Project Idol">
+    <meta property="og:description"
+        content="Born from a shared love of Yoasobi's Idol. Performing under the concept of a masquerade where the focus is solely on the music.">
+    <meta property="og:image" content="assets/img/cover.jpg">
+    <meta property="og:url" content="https://araragi-shinobu.github.io/project-idol">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Project Idol">
+    <meta name="twitter:description" content="A masquerade of sound. J-Rock and anime passion brought to life.">
+    <meta name="twitter:image" content="assets/img/cover.jpg">
+
+    <title>Project Idol</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.PNG">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="preload" as="image" href="assets/img/logo.PNG">
+
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <svg class="loader-mask" viewBox="0 0 100 100" fill="#8b5cf6">
+                <path d="M50 10 L30 30 L20 50 L30 70 L50 80 L70 70 L80 50 L70 30 Z" stroke="currentColor"
+                    stroke-width="2" />
+            </svg>
+            <div class="loader-text">LOADING</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand">
+                <img src="assets/img/logo.PNG" alt="Project Idol logo" class="brand-logo" />
+                <span class="brand-text">PROJECT IDOL</span>
+            </a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#shows">Shows</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="Project Idol">
+        <img src="assets/img/cover.jpg" alt="Project Idol cover" class="hero-cover" />
+        <div class="hero-content">
+            <h1 class="hero-title">PROJECT IDOL</h1>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="fade-section">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>Born from a shared love of Yoasobi's "Idol," PROJECT IDOL brings a unique fusion of J-Rock and anime
+                passion to life on stage.</p>
+            <p>Drawing inspiration from groups like Ave Mujica, we perform under the concept of a "masquerade" where the
+                focus is solely on the music. Behind our masks, we create an immersive experience that transcends
+                identity, letting the sound speak for itself.</p>
+            <p>Each performance is a journey through emotion and energy, where the boundary between performer and
+                audience dissolves into pure musical expression.</p>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="fade-section">
+        <h2>Band Members</h2>
+        <div class="members-grid">
+            <div class="member-card">
+                <img src="assets/img/semi.jpg" alt="Semi - Vocalist" loading="lazy">
+                <div class="member-info">
+                    <div class="member-role">Vocal</div>
+                    <div class="member-name">Semi</div>
+                </div>
+            </div>
+            <div class="member-card">
+                <img src="assets/img/an.jpg" alt="An - Keyboardist" loading="lazy">
+                <div class="member-info">
+                    <div class="member-role">Keyboard</div>
+                    <div class="member-name">An</div>
+                </div>
+            </div>
+            <div class="member-card">
+                <img src="assets/img/muer.JPG" alt="Muer - Guitarist" loading="lazy">
+                <div class="member-info">
+                    <div class="member-role">Guitar</div>
+                    <div class="member-name">Muer</div>
+                </div>
+            </div>
+            <div class="member-card">
+                <img src="assets/img/luyi.JPG" alt="Luyi - Bassist" loading="lazy">
+                <div class="member-info">
+                    <div class="member-role">Bass</div>
+                    <div class="member-name">Luyi</div>
+                </div>
+            </div>
+            <div class="member-card">
+                <img src="assets/img/erha.jpg" alt="Erha - Drummer" loading="lazy">
+                <div class="member-info">
+                    <div class="member-role">Drums</div>
+                    <div class="member-name">Erha</div>
+                </div>
+            </div>
+            <div class="member-card">
+                <img src="assets/img/sindy.jpg" alt="Sindy - ?" loading="lazy">
+                <div class="member-info">
+                    <div class="member-role">?</div>
+                    <div class="member-name">Sindy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="fade-section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="assets/img/summerdistortion1.JPG" alt="Summer Distortion 1.0" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">Summer Distortion 1.0</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/baylands2.JPG" alt="Baylands Park" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">翻车@Baylands Park</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/ROCK_N_GHOUL.JPG" alt="Rock N Ghoul" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">Rock N Ghoul</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/qn.JPG" alt="qn" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">不记得哪次演出@Quarter Note</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/fanime.JPG" alt="fanime" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">卖艺@Fanime</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/ax2025.JPG" alt="ax2025" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">AX2025 Day1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section id="shows" class="fade-section">
+        <h2>Next Performance</h2>
+
+        <div class="show-banner">
+            <!-- Left: full poster, clickable -->
+            <a class="poster-link" href="https://event.hellotaro.com/e/2025_ca_summerdistortion_0927" target="_blank"
+                rel="noopener noreferrer">
+                <img src="assets/img/next-show.JPG" alt="Summer Distortion 2.0 poster" class="show-image">
+            </a>
+
+            <!-- Right: highlighted info -->
+            <div class="show-info">
+                <div class="show-date">September 27, 2025</div>
+                <h3 class="show-title">Summer Distortion 2.0</h3>
+
+                <div class="show-details">
+                    <p><strong>Bright CYC Studios</strong></p>
+                    <p>196 N 3rd St Ground Floor, San Jose, CA 95112</p>
+                    <p>2:00 PM – 11:00 PM</p>
+                </div>
+
+                <a href="https://event.hellotaro.com/e/2025_ca_summerdistortion_0927" target="_blank"
+                    rel="noopener noreferrer" class="ticket-button">
+                    Get Tickets
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-section">
+        <h2>Connect With Us</h2>
+        <div class="social-links">
+            <div class="social-item">
+                <a href="https://www.instagram.com/project.idol.band" target="_blank" rel="noopener noreferrer"
+                    class="social-link" title="Instagram">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
+                    </svg>
+                </a>
+                <span class="social-label">Instagram</span>
+            </div>
+
+            <div class="social-item">
+                <a href="https://youtube.com/@Project-Idol-Band" target="_blank" rel="noopener noreferrer"
+                    class="social-link" title="YouTube">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <span class="social-label">YouTube</span>
+            </div>
+
+            <div class="social-item">
+                <a href="https://www.xiaohongshu.com/user/profile/5d05e719000000001603bae9" target="_blank"
+                    rel="noopener noreferrer" class="social-link" title="Red Book">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                </a>
+                <span class="social-label">小红书</span>
+            </div>
+
+        </div>
+        <div class="contact-info" style="margin-top: 40px;">
+            <p>For bookings and inquiries:</p>
+            <p><a href="mailto:project.idol.band@gmail.com">project.idol.band@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span class="current-year">2025</span> Project Idol. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Masquerade of Sound</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
