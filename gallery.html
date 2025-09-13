@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Idol Gallery - Live performances and memorable moments">
+    <title>Gallery - Project Idol</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.PNG">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <svg class="loader-mask" viewBox="0 0 100 100" fill="#8b5cf6">
+                <path d="M50 10 L30 30 L20 50 L30 70 L50 80 L70 70 L80 50 L70 30 Z" stroke="currentColor"
+                    stroke-width="2" />
+            </svg>
+            <div class="loader-text">LOADING</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/img/logo.PNG" alt="Project Idol logo" class="brand-logo" />
+                <span class="brand-text">PROJECT IDOL</span>
+            </a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul> -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gallery-page-hero">
+        <h1 class="gallery-page-title">Gallery</h1>
+    </div>
+
+    <!-- Gallery Content -->
+    <div class="gallery-container">
+        <a href="index.html" class="back-link">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+            Back to Home
+        </a>
+
+        <!-- Add filter buttons -->
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="live">Live Shows</button>
+            <button class="filter-btn" data-filter="events">Special Events</button>
+            <button class="filter-btn" data-filter="behind">Behind the Scenes</button>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item" data-category="live">
+                <img src="assets/img/shows/summerdistortion1.JPG" alt="Summer Distortion 1.0" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">Summer Distortion 1.0</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="live">
+                <img src="assets/img/shows/baylands2.JPG" alt="Baylands Park" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">翻车@Baylands Park</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="live">
+                <img src="assets/img/shows/qn.JPG" alt="qn" loading="lazy">
+                <div class="gallery-overlay">不记得哪次演出@Quarter Note</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="live">
+                <img src="assets/img/shows/ROCK_N_GHOUL.JPG" alt="ROCK_N_GHOUL" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">ROCK N GHOUL @Art Boutique</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="live">
+                <img src="assets/img/shows/ax2025.JPG" alt="AX1" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">AX2025 day1</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="live">
+                <img src="assets/img/shows/axday2.jpg" alt="AX1" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">AX2025 day2</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="events">
+                <img src="assets/img/events/fanime.JPG" alt="fanime" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">卖艺 @Fanime</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="events">
+                <img src="assets/img/events/rockcosplay2025.JPG" alt="rockcosplay2025" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">rockcosplay2025</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="behind">
+                <img src="assets/img/behind/baylands.JPG" alt="baylands" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">baylands</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="behind">
+                <img src="assets/img/behind/rehersal.JPG" alt="rehersal" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">rehersal</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="behind">
+                <img src="assets/img/behind/fanime.JPG" alt="fanime" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">fanime</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="behind">
+                <img src="assets/img/behind/fanime1.JPG" alt="fanime" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">fanime</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="behind">
+                <img src="assets/img/behind/ax1.JPG" alt="AX" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">AX2025</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="behind">
+                <img src="assets/img/behind/ax2.JPG" alt="AX2" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-caption">AX2025</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span class="current-year">2025</span> Project Idol. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Masquerade of Sound</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Gallery Filter Script -->
+    <script>
+        // Gallery filtering functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            // Show all items by default when page loads
+            galleryItems.forEach(item => {
+                item.style.display = 'block';
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+                item.style.transition = 'all 0.3s ease';
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter gallery items with animation
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
