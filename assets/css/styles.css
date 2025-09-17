@@ -753,6 +753,47 @@ h2 {
     transform: translateX(-3px);
 }
 
+/* Mobile-friendly tweaks for gallery back-link and filters */
+@media (max-width: 600px) {
+
+    /* Center and enlarge back link for better tap target */
+    .gallery-container .back-link {
+        margin: 0 auto 24px;
+        padding: 12px 18px;
+        border-radius: 28px;
+        font-size: 0.95rem;
+    }
+
+    .gallery-container .back-link svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Convert filters to a horizontal scrollable pill bar */
+    .gallery-filters {
+        justify-content: flex-start;
+        gap: 10px;
+        margin-bottom: 24px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 6px 4px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .gallery-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        flex: 0 0 auto;
+        padding: 10px 16px;
+        border-radius: 9999px;
+        font-size: 0.9rem;
+        scroll-snap-align: start;
+    }
+}
+
 /* Additional member card styling for standalone page */
 .members-intro {
     text-align: center;
