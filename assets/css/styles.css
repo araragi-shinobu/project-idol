@@ -762,6 +762,7 @@ h2 {
         padding: 12px 18px;
         border-radius: 28px;
         font-size: 0.95rem;
+        display: inline-flex;
     }
 
     .gallery-container .back-link svg {
