@@ -11,6 +11,7 @@ function initializeApp() {
     initSmoothScroll();
     initScrollAnimations();
     initGallery();
+    initShowsLightbox(); // New function for shows section
     initLoader();
     initMobileMenu();
 }
@@ -158,7 +159,86 @@ function initGallery() {
     });
 }
 
-// Create lightbox element
+// Gallery filtering functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Function to filter gallery items
+    function filterGallery(filter) {
+        galleryItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+
+    // Set Live Shows as default on page load
+    filterGallery('live');
+
+    // Set the Live Shows button as active by default
+    filterButtons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === 'live') {
+            btn.classList.add('active');
+        }
+    });
+
+    // Add click handlers for filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const filter = this.getAttribute('data-filter');
+
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filter gallery items
+            filterGallery(filter);
+        });
+    });
+});
+
+// Shows section lightbox functionality (NEW)
+function initShowsLightbox() {
+    // Set up click handlers for poster items in shows section
+    const posterItems = document.querySelectorAll('.poster-item');
+
+    posterItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior if it's an anchor
+            const img = this.querySelector('img');
+            if (img) {
+                openShowLightbox(img.src, img.alt);
+            }
+        });
+    });
+}
+
+// Open lightbox for shows section (NEW)
+function openShowLightbox(src, alt) {
+    const lightbox = createLightbox(src, alt);
+    document.body.appendChild(lightbox);
+
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+
+    // Animate in
+    setTimeout(() => {
+        lightbox.classList.add('active');
+    }, 10);
+}
+
+// Create lightbox element (UPDATED to work for both gallery and shows)
 function createLightbox(src, alt) {
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox';
@@ -172,25 +252,31 @@ function createLightbox(src, alt) {
     // Close on click
     lightbox.addEventListener('click', function (e) {
         if (e.target === lightbox || e.target.className === 'lightbox-close') {
-            lightbox.classList.remove('active');
-            setTimeout(() => {
-                lightbox.remove();
-            }, 300);
+            closeLightbox(lightbox);
         }
     });
 
     // Close on escape key
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && document.querySelector('.lightbox')) {
-            const lightbox = document.querySelector('.lightbox');
-            lightbox.classList.remove('active');
-            setTimeout(() => {
-                lightbox.remove();
-            }, 300);
+    const escapeHandler = function (e) {
+        if (e.key === 'Escape') {
+            closeLightbox(lightbox);
+            document.removeEventListener('keydown', escapeHandler);
         }
-    });
+    };
+    document.addEventListener('keydown', escapeHandler);
 
     return lightbox;
+}
+
+// Close lightbox helper function (NEW)
+function closeLightbox(lightbox) {
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore body scroll
+        setTimeout(() => {
+            lightbox.remove();
+        }, 300);
+    }
 }
 
 // Page loader
@@ -252,17 +338,10 @@ document.querySelectorAll('.member-card').forEach(card => {
 // Parallax effect for hero section
 window.addEventListener('scroll', function () {
     const scrolled = window.pageYOffset;
-    // const hero = document.querySelector('.hero');
-    // if (hero) {
-    //     hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    // }
-    const cover = document.querySelector('.hero-cover');
     const hero = document.querySelector('.hero');
     if (hero) {
         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
-
-
 });
 
 // Add dynamic year to footer
@@ -289,6 +368,7 @@ const lightboxStyles = `
         z-index: 2000;
         opacity: 0;
         transition: opacity 0.3s ease;
+        cursor: zoom-out;
     }
     
     .lightbox.active {
@@ -302,7 +382,9 @@ const lightboxStyles = `
     }
     
     .lightbox-content img {
-        width: 100%;
+        max-width: 100%;
+        max-height: 90vh;
+        width: auto;
         height: auto;
         display: block;
         border: 2px solid var(--primary-purple);
@@ -318,11 +400,31 @@ const lightboxStyles = `
         font-size: 40px;
         cursor: pointer;
         transition: all 0.3s ease;
+        z-index: 2001;
     }
     
     .lightbox-close:hover {
         color: var(--accent-purple);
         transform: scale(1.2);
+    }
+    
+    @media (max-width: 768px) {
+        .lightbox-content {
+            max-width: 95%;
+            max-height: 95%;
+        }
+        
+        .lightbox-close {
+            top: 20px;
+            right: 20px;
+            background: rgba(10, 10, 10, 0.8);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
     }
 `;
 
