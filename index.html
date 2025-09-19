@@ -233,7 +233,28 @@
             <p>For bookings and inquiries:</p>
             <p><a href="mailto:project.idol.band@gmail.com">project.idol.band@gmail.com</a></p>
         </div>
+
+        <!-- Donation Button -->
+        <div class="donation-section" style="margin-top: 40px;">
+            <button class="donation-btn" onclick="openDonationModal()">
+                <span class="donation-icon">🧋</span>
+                Buy us a milk tea
+            </button>
+        </div>
     </section>
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="donation-modal">
+        <div class="donation-modal-content">
+            <span class="donation-close" onclick="closeDonationModal()">&times;</span>
+            <h3>Buy us a milk tea! 🧋</h3>
+            <p>Support Project Idol and help us keep making music!</p>
+            <div class="venmo-qr-container">
+                <img src="assets/img/venmo.png" alt="Venmo QR Code" class="venmo-qr">
+            </div>
+            <p class="donation-note">Scan with Venmo app to send us a tip</p>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>

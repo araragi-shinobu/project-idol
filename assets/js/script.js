@@ -432,3 +432,46 @@ const lightboxStyles = `
 const styleSheet = document.createElement('style');
 styleSheet.textContent = lightboxStyles;
 document.head.appendChild(styleSheet);
+
+// ===========================
+// Donation Modal Functions
+// ===========================
+
+// Open donation modal
+function openDonationModal() {
+    const modal = document.getElementById('donationModal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+        // Add escape key listener
+        const escapeHandler = function (e) {
+            if (e.key === 'Escape') {
+                closeDonationModal();
+                document.removeEventListener('keydown', escapeHandler);
+            }
+        };
+        document.addEventListener('keydown', escapeHandler);
+    }
+}
+
+// Close donation modal
+function closeDonationModal() {
+    const modal = document.getElementById('donationModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside content
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('donationModal');
+    if (modal) {
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeDonationModal();
+            }
+        });
+    }
+});
